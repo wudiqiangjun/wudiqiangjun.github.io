@@ -170,13 +170,18 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="百元自制复古游戏机"><a href="#百元自制复古游戏机" class="headerlink" title="百元自制复古游戏机"></a>百元自制复古游戏机</h1><p> 目前市面上大部分游戏机，像是swich（好像已经被破解了……）、ps5等，动辄就是一两千的价格，对于<del>垃圾佬</del>（划掉）学生党来说，手搓一台游戏机无疑是最好的方案，同时还可以将那些家中闲置的机顶盒利用起来。</p>
-<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><p> 一台机顶盒、<a target="_blank" rel="noopener" href="https://etcher.balena.io/">balenaEtcher</a>、<a href="">系统</a>、一块U盘或硬盘（60G以上，最好是读写速度较快的，要不然会卡）、电脑（win、mac、Linux均可）</p>
+  <h1 id="百元自制复古游戏机"><a href="#百元自制复古游戏机" class="headerlink" title="百元自制复古游戏机"></a>百元自制复古游戏机</h1><p> 目前市面上大部分游戏机，像是swich（好像已经被破解了……）、ps5等，动辄就是一两千的价格，对于<del>垃圾佬</del>（划掉）学生党来说，手搓一台游戏机无疑是最好的方案，同时还可以将那些家中闲置的机顶盒利用起来。<br> （<strong>刷前警告：刷机有风险，本人不对你的行为所造成的后果负责</strong>）</p>
+<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><p> 一台机顶盒、<a target="_blank" rel="noopener" href="https://etcher.balena.io/">balenaEtcher</a>、<a target="_blank" rel="noopener" href="https://www.emuelec.cn/472.html">系统</a>、一块U盘或硬盘（60G以上，最好是读写速度较快的，要不然会卡）、电脑（win、mac、Linux均可）</p>
 <h3 id="机顶盒"><a href="#机顶盒" class="headerlink" title="机顶盒"></a>机顶盒</h3><p> 这里我推荐<strong>晶晨s905l3a&#x2F;b</strong>芯片的机顶盒，主要是因为辣娃娃大佬的系统默认支持这两个芯片，可以省去很多中间步骤，例如改dfu文件，适合小白，而且搭载该芯片的机顶盒价格普遍较低，海鲜市场上一搜一大把，不想蹲的话50元即可拿下。</p>
 <h3 id="balenaEtcher"><a href="#balenaEtcher" class="headerlink" title="balenaEtcher"></a>balenaEtcher</h3><p> 傻瓜式烧录软件，对小白很友好</p>
 <h3 id="存储介质"><a href="#存储介质" class="headerlink" title="存储介质"></a>存储介质</h3><p> 我本人是使用了一块500G机械大硬盘，只要是60G以上的基本都可以<br> <strong>重要的事情说三遍：不要上pdd买！不要上pdd买！不要上pdd买！</strong>（本人亲身经历）</p>
-<h2 id="二、辨认机顶盒芯片型号"><a href="#二、辨认机顶盒芯片型号" class="headerlink" title="二、辨认机顶盒芯片型号"></a>二、辨认机顶盒芯片型号</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p> 很简单，<del>暴力</del>拆开机顶盒<br> 绝大多数机顶盒都会在脚垫位置隐藏螺丝，只需要把四个脚垫都撬开后，用螺丝刀拧掉即可</p>
- 
+<h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><p> 此处感谢辣娃娃大佬提供的刷机包，其中已经有很多款游戏了，从网盘上把它download下来（50多个G，建议电脑挂机下载）</p>
+<h2 id="二、辨认机顶盒芯片型号"><a href="#二、辨认机顶盒芯片型号" class="headerlink" title="二、辨认机顶盒芯片型号"></a>二、辨认机顶盒芯片型号</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p> 很简单，<del>暴力</del>拆开机顶盒<br> 绝大多数机顶盒都会在脚垫位置隐藏螺丝，只需要把四个脚垫都撬开后，用螺丝刀拧掉即可<br> <img src="/picture%5Cqq_pic_merged_1742703852030.jpg" alt="机顶盒" title="机顶盒"></p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p> 最中心的那颗芯片一般就是cpu，上面如果涂了硅胶，用一字螺丝刀轻轻刮开即可，如果贴有散热金属片，那么就用一字螺丝刀撬开</p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p> 仔细观察cpu上面的丝印，一般的cpu型号都写在上面</p>
+<h2 id="三、烧录系统"><a href="#三、烧录系统" class="headerlink" title="三、烧录系统"></a>三、烧录系统</h2><p> 打开balenaEtcher <img src="/picture%5CQQ20250323-123141.png" alt="balenaEtcher">，将准备要刷系统的存储介质插入电脑，第一个选项选择download下来的<strong>刷机包</strong>，第二个选项选择<strong>插入的存储介质</strong>（<strong>重要警告：一定要选对硬盘，否则后果自负</strong>），最后一步，确认无误后，点击最后一个<strong>Flash</strong>按钮，耐心等待一会，直到显示出<strong>successfully</strong>的提示后拔出硬盘。</p>
+<h2 id="四、上电开机"><a href="#四、上电开机" class="headerlink" title="四、上电开机"></a>四、上电开机</h2><p> 接入电源，开机！<br> <strong>注意</strong>：一定要确保电视显示的是<strong>机顶盒的系统</strong>，而不是电视本身的系统，如已经进入电视系统，则在系统中找到<strong>信号源切换</strong>,切换到机顶盒的系统。<br> 开机后将硬盘插入靠近前端的那个usb接口，在主页应用中找到切换系统应用（我买的时候，卖家挺良心的，装上了切换系统的应用，如果没有，请自行百度如何切换系统，<del>我懒得写了</del>绝对不是因为麻烦）<br> 静静等待一会，知道显示出游戏机系统的启动引导页面,就大功告成了，Let’s enjoy it!<br> <img src="/picture%5C2025-03-23-12-56-30-727.jpg" alt="启动页面" title="启动引导"></p>
+<h3 id="后续相关系统设置请敬请期待我的后续文章，bye！"><a href="#后续相关系统设置请敬请期待我的后续文章，bye！" class="headerlink" title="后续相关系统设置请敬请期待我的后续文章，bye！"></a>后续相关系统设置请敬请期待我的后续文章，bye！</h3> 
       <!-- reward -->
       
     </div>
